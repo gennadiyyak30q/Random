@@ -1,0 +1,50 @@
+import random
+import time
+import math
+import numpy as np
+
+# Define a function to generate random numbers
+def generate_numbers():
+    numbers = []
+    for i in range(10):
+        numbers.append(random.randint(1, 100))
+    return numbers
+
+# Define a function to calculate the average of a list of numbers
+def calculate_average(numbers):
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
+
+# Generate a list of random numbers
+numbers = generate_numbers()
+
+# Calculate the average of the numbers
+average = calculate_average(numbers)
+
+# Print the results
+print("Generated numbers:", numbers)
+print("Average:", average)
+
+# Use a conditional statement to check if the average is greater than 50
+if average > 50:
+    print("The average is greater than 50.")
+else:
+    print("The average is less than or equal to 50.")
+
+# Use a loop to calculate the square root of each number and store it in a new list
+sqrt_numbers = []
+for number in numbers:
+    sqrt_numbers.append(math.sqrt(number))
+
+# Print the square root of each number
+print("Square root of each number:", sqrt_numbers)
+
+# Use numpy to calculate the standard deviation of the numbers
+std_dev = np.std(numbers)
+
+# Print the standard deviation
+print("Standard deviation:", std_dev)
+
+# Pause for 2 seconds before exiting the program
+time.sleep(2)
